@@ -1,0 +1,33 @@
+{{ define "user_list" }}
+{{/*<div class="uk-container uk-container-large">*/}}
+    <div class="uk-card uk-card-default">
+        <div class="uk-card-header">
+            <h4 class="uk-card-title uk-margin-remove-bottom">User List</h4>
+        </div>
+        <div class="uk-card uk-card-body">
+            <table class="uk-table uk-table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>ADDRESS</th>
+                        <th>EXPIRE</th>
+                        <th>OS</th>
+                        <th>STATUS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ range . }}
+                        <tr>{{ .Id }}</tr>
+                        <tr>{{ .Name }}</tr>
+                        <tr>{{ .Address }}</tr>
+                        <tr>{{ .Expire }}</tr>
+                        <tr>{{ .Os }}</tr>
+                        <tr>{{ .Status }}</tr>
+                    {{ end }}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{{/*</div>*/}}
+{{ end }}

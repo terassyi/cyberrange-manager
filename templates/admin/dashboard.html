@@ -1,0 +1,16 @@
+{{ define "content" }}
+	{{ template "admin_header" }}
+	<div class="uk-container uk-container-expand">
+		<h1 class="uk-heading-small">Admin Panel</h1>
+		<div class="uk-grid uk-text-center">
+{{/*			<div class="uk-flex uk-flex-center">*/}}
+				<div class="uk-width-1-3@l">
+					{{ template "settings" . }}
+				</div>
+				<div class="uk-width-expand@l">
+					{{ template "user_list" . }}
+				</div>
+{{/*			</div>*/}}
+		</div>
+	</div>
+{{ end }}

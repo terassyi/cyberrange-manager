@@ -1,0 +1,23 @@
+{{ define "header" }}
+    <div uk-sticky="media:960" class="uk-navbar-container tm-navbar-container uk-active uk-sticky-below uk-sticky-fixed"
+         style="position: fixed; top: 0px; width: 1022px"
+    >
+        <nav class="uk-navbar uk-background-primary">
+            <div class="uk-navbar-left">
+                <a href="/" class="uk-navbar-item uk-logo uk-text-muted" ><div id="text">お手軽 Cyber Range Manager</div></a>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav uk-visible@m">
+                    <li class="uk-active">
+                        <a class="uk-button uk-bottun-default" href="/logout" id="text">logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <style>
+        #text {
+            color: white;
+        }
+    </style>
+{{ end }}

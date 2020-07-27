@@ -1,0 +1,26 @@
+{{ define "settings" }}
+{{/*    <div class="uk-container uk-container-small">*/}}
+        <div class="uk-card uk-card-default ">
+            <div class="uk-card-header">
+                <h4 class="uk-card-title uk-margin-remove-bottom">Settings</h4>
+            </div>
+            <div class="uk-card-body">
+                    <dl class="uk-description-list uk-description-list-divider">
+                        <dt>server address</dt>
+                        <dd>{{ .Address }}</dd>
+                        <dt>host name</dt>
+                        <dd>{{ .HostName }}</dd>
+                        <dt>password</dt>
+                        <dd>xxxxxxxxxxxx</dd>
+                        <dt>local address</dt>
+                        <dd>{{ .LocaAddress }}</dd>
+                        <dt>hub</dt>
+                        <dd>{{ .Hub }}</dd>
+                    </dl>
+                </div>
+            <div class="uk-card-footer">
+                <a href="#" class="uk-button uk-button-text">Change Settings</a>
+            </div>
+        </div>
+{{/*        </div>*/}}
+{{ end }}

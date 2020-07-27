@@ -1,0 +1,19 @@
+
+CREATE DATABASE panel IF NOT EXISTS;
+
+CREATE TABLE admin_account IF NOT EXISTS (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(32) NOT NULL,
+    password VARCHAR(1024) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE account IF NOT EXISTS (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(32) NOT NULL,
+    password VARCHAR(1024) NOT NULL,
+    os VARCHAR(32),
+    expire DATE,
+    address VARCHAR(32),
+    PRIMARY KEY (id)
+);
