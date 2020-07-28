@@ -1,17 +1,19 @@
 package account
 
 import (
-	"github.com/terassyi/cyberrange-manager/database"
-	"github.com/terassyi/cyberrange-manager/util"
+	"github.com/terassyi/cyberrange-manager/src/database"
+	"github.com/terassyi/cyberrange-manager/src/util"
 	"time"
 )
 
 type Account struct {
-	Id int
-	Name string
+	Id       int
+	Name     string
 	Password string
-	Os string
-	Expire *time.Time
+	Os       string
+	Address  string
+	Expire   *time.Time
+	Status   string
 }
 
 func New(name, password string) (*Account, error) {

@@ -5,7 +5,7 @@
             <h4 class="uk-card-title uk-margin-remove-bottom">User List</h4>
         </div>
         <div class="uk-card uk-card-body">
-            <table class="uk-table uk-table-striped">
+            <table class="uk-table uk-table-stdiped">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -17,13 +17,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {{ range .Accounts }}
-                        <tr>{{ .Id }}</tr>
-                        <tr>{{ .Name }}</tr>
-                        <tr>{{ .Address }}</tr>
-                        <tr>{{ .Expire }}</tr>
-                        <tr>{{ .Os }}</tr>
-                        <tr>{{ .Status }}</tr>
+                    {{ range $index, $account := .Accounts }}
+                        <tr>
+                            <td>{{ $account.Id }}</td>
+                            <td>{{ $account.Name }}</td>
+                            <td>{{ $account.Address }}</td>
+                            <td>{{ $account.Expire }}</td>
+                            <td>{{ $account.Os }}</td>
+                            <td>{{ $account.Status }}</td>
+                        </tr>
                     {{ end }}
                 </tbody>
             </table>

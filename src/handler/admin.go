@@ -2,8 +2,8 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/terassyi/cyberrange-manager/model/account"
-	"github.com/terassyi/cyberrange-manager/model/setting"
+	"github.com/terassyi/cyberrange-manager/src/model/account"
+	"github.com/terassyi/cyberrange-manager/src/model/setting"
 	"html/template"
 	"net/http"
 )
