@@ -2,6 +2,8 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/terassyi/cyberrange-manager/model/account"
+	"github.com/terassyi/cyberrange-manager/model/setting"
 	"html/template"
 	"net/http"
 )
@@ -27,6 +29,17 @@ func (h *Handler) AdminLogout(c *gin.Context) {
 }
 
 func (h *Handler) DashBoard(c *gin.Context) {
+	accounts, err := account.GetAccounts(h.DB)
+	if err != nil {
+		c.String(http.StatusInternalServerError, "Internal Server Error.")
+	}
+	settings := setting.Setting{
+		Address:      "hogehoge",
+		HostName:     "cyberrange.terassyi.net",
+		LocalAddress: "192.168.100.1",
+		Password:     "test",
+		Hub:          "default",
+	}
 	resource := template.Must(template.ParseFiles(
 		"templates/base.html",
 		"templates/admin/admin_header.html",
@@ -36,5 +49,8 @@ func (h *Handler) DashBoard(c *gin.Context) {
 		"templates/components/footer.html",
 	))
 	h.SetHTMLTemplate(resource)
-	c.HTML(http.StatusOK, "base.html", nil)
+	c.HTML(http.StatusOK, "base.html", gin.H{
+		"Settings": settings,
+		"Accounts": accounts,
+	})
 }

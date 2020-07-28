@@ -1,4 +1,4 @@
-package main
+package src
 
 import (
 	"database/sql"
@@ -6,7 +6,7 @@ import (
 	"github.com/gin-contrib/sessions/cookie"
 	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/terassyi/cyberrange_manager_server/handler"
+	"github.com/terassyi/cyberrange-manager/src/handler"
 	"net/http"
 )
 
@@ -16,7 +16,7 @@ var (
 
 const (
 	DRIVER           = "mysql"
-	DATA_SOURCE_NAME = "root:toor@tcp([localhost]:3306)/panel" // TODO decide database name
+	DATA_SOURCE_NAME = "root:toor@tcp([localhost]:3306)/panel?parseTime=true" // TODO decide database name
 )
 
 func init() {

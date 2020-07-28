@@ -3,7 +3,7 @@ package handler
 import (
 	"database/sql"
 	"github.com/gin-gonic/gin"
-	"github.com/terassyi/cyberrange_manager_server/database"
+	"github.com/terassyi/cyberrange-manager/src/database"
 	"net/http"
 )
 

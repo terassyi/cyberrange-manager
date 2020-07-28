@@ -1,19 +1,20 @@
+CREATE DATABASE IF NOT EXISTS panel;
 
-CREATE DATABASE panel IF NOT EXISTS;
+USE panel;
 
-CREATE TABLE admin_account IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS admin_accounts (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(32) NOT NULL,
     password VARCHAR(1024) NOT NULL,
     PRIMARY KEY (id)
 );
 
-CREATE TABLE account IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS accounts (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(32) NOT NULL,
     password VARCHAR(1024) NOT NULL,
     os VARCHAR(32),
-    expire DATE,
+    expire DATETIME,
     address VARCHAR(32),
     PRIMARY KEY (id)
 );
