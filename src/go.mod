@@ -1,4 +1,4 @@
-module github.com/terassyi/cyberrange-manger
+module github.com/terassyi/cyberrange-manager/src
 
 go 1.13
 
